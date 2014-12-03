@@ -1,0 +1,32 @@
+@import "_var.scss";
+
+body{
+	background-color: $backgroundColor;
+	font-size: 40px;
+}
+
+.div1{
+	background-color: $backgroundColor2;
+	font-family: 200px;
+	margin-top: 60px;
+	margin-bottom: -100px;
+}
+
+.div2{
+	background-color: $backgroundColor3;
+}
+
+.p{
+	font-size: 150px;
+	text-align: center;
+	padding-top: -20px;
+	clear: both;
+}
+
+.li{
+	list-style-type: none;
+	font-size: 70%;
+	margin-left: -30px;
+}
+
+@import "_header.scss";

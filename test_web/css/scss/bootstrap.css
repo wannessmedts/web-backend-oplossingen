@@ -1,0 +1,41 @@
+/* line 3, C:/Users/wannes/Desktop/map-backend/web-backend/oplossingen/test_web/css/scss/bootstrap.scss */
+body {
+  background-color: orange;
+  font-size: 40px;
+}
+
+/* line 8, C:/Users/wannes/Desktop/map-backend/web-backend/oplossingen/test_web/css/scss/bootstrap.scss */
+.div1 {
+  background-color: red;
+  font-family: 200px;
+  margin-top: 60px;
+  margin-bottom: -100px;
+}
+
+/* line 15, C:/Users/wannes/Desktop/map-backend/web-backend/oplossingen/test_web/css/scss/bootstrap.scss */
+.div2 {
+  background-color: yellow;
+}
+
+/* line 19, C:/Users/wannes/Desktop/map-backend/web-backend/oplossingen/test_web/css/scss/bootstrap.scss */
+.p {
+  font-size: 150px;
+  text-align: center;
+  padding-top: -20px;
+  clear: both;
+}
+
+/* line 26, C:/Users/wannes/Desktop/map-backend/web-backend/oplossingen/test_web/css/scss/bootstrap.scss */
+.li {
+  list-style-type: none;
+  font-size: 70%;
+  margin-left: -30px;
+}
+
+/* line 5, C:/Users/wannes/Desktop/map-backend/web-backend/oplossingen/test_web/css/scss/_header.scss */
+nav ul {
+  background-color: green;
+  float: left;
+  margin-top: -50px;
+  display: block;
+}
