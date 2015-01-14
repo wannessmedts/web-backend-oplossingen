@@ -10,10 +10,12 @@ body{
 	font-family: 200px;
 	margin-top: 60px;
 	margin-bottom: -100px;
+	width: $width;
 }
 
 .div2{
 	background-color: $backgroundColor3;
+	width: $width;
 }
 
 .p{
