@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'texas_grunge_demoregular';
+    src: url('../fonts/texas/texas_grunge_demo-webfont.eot');
+    src: url('../fonts/texas/texas_grunge_demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texas/texas_grunge_demo-webfont.woff2') format('woff2'),
+         url('../fonts/texas/texas_grunge_demo-webfont.woff') format('woff'),
+         url('../fonts/texas/texas_grunge_demo-webfont.ttf') format('truetype'),
+         url('../fonts/texas/texas_grunge_demo-webfont.svg#texas_grunge_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dk_lemon_yellow_sunregular';
+    src: url('../fonts/lemon/dk_lemon_yellow_sun-webfont.eot');
+    src: url('../fonts/lemon/dk_lemon_yellow_sun-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lemon/dk_lemon_yellow_sun-webfont.woff2') format('woff2'),
+         url('../fonts/lemon/dk_lemon_yellow_sun-webfont.woff') format('woff'),
+         url('../fonts/lemon/dk_lemon_yellow_sun-webfont.ttf') format('truetype'),
+         url('../fonts/lemon/dk_lemon_yellow_sun-webfont.svg#dk_lemon_yellow_sunregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.page	
+{
+	margin: 0 auto;
+	width: 400px;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#fbpersoon, #fbdier
+{
+	display: none;
+	font-size: 20px;
+	width: 270px;
+	padding: 30px;
+	background-color: #FF5B0D;
+	border: 3px solid #C95405;
+	margin: 0 0 30px 0;
+}
+
+form
+{
+	font-family: arial;
+	font-size: 16px;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+fieldset
+{
+	padding: 30px;
+	border: 1px solid #02CBDB;
+	margin: 40px 0 0 0;
+	font-family: texas_grunge_demoregular;
+}
+
+legend
+{
+	font-family: texas_grunge_demoregular;
+	font-size: 30px;
+	color: #035C92;
+}
+
+input
+{
+	font-family: dk_lemon_yellow_sunregular;
+	height: 30px;
+	width: 200px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	padding-left: 10px;
+	border: 1px solid #D27E00;
+	display: block;
+}
+
+input:hover
+{
+	background-color: #E64A00;
+}
+
+input:focus
+{
+	color:#057c0d;
+	background-color: orange;
+}
+
+label
+{
+	margin-bottom: 30px;
+}
+
+input[type=submit]
+{
+	font-size: 20px;
+	height: 30px;
+	background-color: #666;
+	color: #000;
+	text-transform: uppercase;
+	border: none;
+}
+
+input[type=submit]:hover
+{
+	background-color: #E64A00;
+	color: #000;
+}
+
+

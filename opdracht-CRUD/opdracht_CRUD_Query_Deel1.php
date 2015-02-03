@@ -10,7 +10,7 @@ try
 
 	$messageContainer 	=	'Database bieren succesvol aangemaakt';
 
-	$q	=	'SELECT * 
+	$q	=	'SELECT *
 			 FROM bieren
 			 INNER JOIN brouwers
 			 	ON bieren.brouwernr  = brouwers.brouwernr
@@ -93,6 +93,7 @@ catch ( PDOException $e )
         
     <thead>
         <tr>
+            <th>#</th>
             <th>biernr (PK)</th>
             <th>naam</th>
             <th>brouwernr</th>
@@ -111,16 +112,17 @@ catch ( PDOException $e )
 		<?php foreach ($fetchedResult as $rij): ?>
 
 		<tr>
-			<th><?php echo $rij['biernr'] ?></th>
-			<th><?php echo $rij['naam'] ?></th>
-			<th><?php echo $rij['brouwernr'] ?></th>
-			<th><?php echo $rij['soortnr'] ?></th>
-			<th><?php echo $rij['alcohol'] ?></th>
-			<th><?php echo $rij['brnaam'] ?></th>
-			<th><?php echo $rij['adres'] ?></th>
-			<th><?php echo $rij['postcode'] ?></th>
-			<th><?php echo $rij['gemeente'] ?></th>
-			<th><?php echo $rij['omzet'] ?></th>
+            <th></th>
+			<th><?= $rij['biernr'] ?></th>
+			<th><?= $rij['naam'] ?></th>
+			<th><?= $rij['brouwernr'] ?></th>
+			<th><?= $rij['soortnr'] ?></th>
+			<th><?= $rij['alcohol'] ?></th>
+			<th><?= $rij['brnaam'] ?></th>
+			<th><?= $rij['adres'] ?></th>
+			<th><?= $rij['postcode'] ?></th>
+			<th><?= $rij['gemeente'] ?></th>
+			<th><?= $rij['omzet'] ?></th>
 		</tr>
 				
 		<?php endforeach ?>

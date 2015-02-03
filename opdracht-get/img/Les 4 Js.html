@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0181)file:///C:/Users/wannes/Desktop/frontend-pang/les-4/index.html?fnaam=dczccz&fpostcode=3232&femail=wannes.smedts%40hotmail.be&fnaamdier=ezce&fras=zceez&feleftijddier=23&submit=submit -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>Les 4 Js</title>
+
+<link rel="stylesheet" type="text/css" href="./Les 4 Js_files/style.css">
+
+</head>
+
+<body>
+
+	<div class="page">
+
+	<form action="" method="" name="formulier" onsubmit="return(valideren())">
+
+	<fieldset>
+
+		<legend>Persoonlijke gegevens</legend>
+		<div id="fbpersoon"></div>
+
+		<label>Naam</label>
+			<input type="text" name="fnaam">
+
+		<label>Postcode</label>
+			<input type="text" name="fpostcode">
+
+		<label>E-mail</label>
+			<input type="text" name="femail">
+
+	</fieldset>
+
+	<fieldset>
+
+		<legend>Mijn huisdier</legend>
+
+		<div id="fbdier"></div>
+
+		<label>Naam</label>
+			<input type="text" name="fnaamdier">
+
+		<label>Ras</label>
+			<input type="text" name="fras">
+
+		<label>Leeftijd</label>
+			<input type="text" name="feleftijddier">
+
+		
+	</fieldset>
+
+	<input type="submit" value="submit" name="submit">
+
+	</form>
+
+	</div>
+
+
+<script type="text/javascript">
+
+function emailControleren()
+{
+	var mailControle = document.formulier.femail.value;
+	var aapWaar = mailControle.indexOf("@");
+	var puntWaar = mailControle.lastIndexOf(".");
+
+	//alert('punt: ' + puntWaar + ' en @: ' + aapWaar);
+
+	if(aapWaar < 1 || (puntWaar - aapWaar < 3))
+	{
+		document.formulier.femail.focus();
+		document.getElementById("fbpersoon").style.display="block";
+		document.getElementById("fbpersoon").innerHTML="Mail adres is niet juist vb: azer@ty.ui";
+		return false;
+	}
+
+document.getElementById("fbpersoon").style.display="none";
+
+return true;
+
+}
+
+function valideren()
+{
+	//alert('start met valideren');
+
+	/*formulier persoon*/
+
+	//veld naam
+
+	if(document.formulier.fnaam.value=="")
+	{
+		document.formulier.fnaam.focus();
+		document.getElementById("fbpersoon").style.display="block";
+		document.getElementById("fbpersoon").innerHTML="Naam moet ingevuld worden";
+		return false;
+	}
+
+	//veld postcode
+
+	if(document.formulier.fpostcode.value=="")
+	{
+		document.formulier.fpostcode.focus();
+		document.getElementById("fbpersoon").style.display="block";
+		document.getElementById("fbpersoon").innerHTML="Postcode moet ingevuld worden";
+		return false;
+	}
+
+	if(document.formulier.fpostcode.value.length!=4)
+	{
+		document.formulier.fpostcode.focus();
+		document.getElementById("fbpersoon").style.display="block";
+		document.getElementById("fbpersoon").innerHTML="Postcode moet 4 cijfers bevatten";
+		return false;
+	}
+
+	if(isNaN(document.formulier.fpostcode.value))
+	{
+		document.formulier.fpostcode.focus();
+		document.getElementById("fbpersoon").style.display="block";
+		document.getElementById("fbpersoon").innerHTML="Postcode moeten cijfers zijn";
+		return false;
+	}
+
+	//veld e-mail
+
+	if(document.formulier.femail.value=="")
+	{
+		document.formulier.femail.focus();
+		document.getElementById("fbpersoon").style.display="block";
+		document.getElementById("fbpersoon").innerHTML="E-mail mooet ingevuld worden";
+		return false;
+	}
+	else
+	{
+		var emailOK = emailControleren();
+		if(emailOK == false)
+		{
+			return false;
+		}
+	}
+
+	/*formulier dier*/
+
+	//veld naamdier
+
+	if(document.formulier.fnaamdier.value=="")
+	{
+		document.formulier.fnaamdier.focus();
+		document.getElementById("fbdier").style.display="block";
+		document.getElementById("fbdier").innerHTML="Naam van dier moet ingevuld worden";
+		return false;
+	}
+
+	//veld ras
+
+	if(document.formulier.fras.value=="")
+	{
+		document.formulier.fras.focus();
+		document.getElementById("fbdier").style.display="block";
+		document.getElementById("fbdier").innerHTML="Ras van dier moet ingevuld worden";
+		return false;
+	}
+
+	//veld leeftijd dier
+
+	if(document.formulier.feleftijddier.value=="")
+	{
+		document.formulier.feleftijddier.focus();
+		document.getElementById("fbdier").style.display="block";
+		document.getElementById("fbdier").innerHTML="Leeftijd van dier moet ingevuld worden";
+		return false;
+	}
+
+	if(isNaN(document.formulier.feleftijddier.value))
+	{
+		document.formulier.feleftijddier.focus();
+		document.getElementById("fbdier").style.display="block";
+		document.getElementById("fbdier").innerHTML="leeftijd van het dier moeten cijfers zijn";
+		return false;
+	}
+}
+
+</script>
+
+	
+
+
+</body></html>
