@@ -10,7 +10,7 @@ if (isset($_POST['submit']))
 {
 	if(isset($_POST['taak']))
 	{
-		$taken							=	array($_POST['taak']);
+		$taken							=	array(trim($_POST['taak']));
 		$_SESSION['todo-lijst'][]		=	$taken;
 	}
 }
