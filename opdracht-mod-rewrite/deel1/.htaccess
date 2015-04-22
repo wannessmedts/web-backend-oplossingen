@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^mydomain.com [NC]
+RewriteRule ^redirect.php$ http://www.app.local/$1 [R=301,L]
+
+#RewriteRule ^redirect.php$ original.php

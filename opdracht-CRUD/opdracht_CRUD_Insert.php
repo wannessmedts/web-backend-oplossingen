@@ -31,6 +31,8 @@ if (isset($_POST['submit']))
 
 		$submit = $statement->execute();
 
+		var_dump($submit);
+
 		if($submit)
 		{
 			$message = 'Brouwerij succesvol toegevoegd.';

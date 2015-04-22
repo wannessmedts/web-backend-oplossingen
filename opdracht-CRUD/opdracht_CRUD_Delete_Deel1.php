@@ -27,6 +27,28 @@ try
 			$columnNames[  ]	=	$key;
 		}
 
+if(isset($_POST['delete']))
+{
+	$deleteQuery	=	'DELETE FROM brouwers
+								WHERE brouwernr = :brouwernr
+								LIMIT 1';
+
+	$deleteStatement	=	$db->prepare( $deleteQuery );
+
+	$deleteStatement->bindParam( ':brouwernr', $_POST['delete'] );
+
+	$verwijderd		=	$deleteStatement->execute();
+
+	if($verwijderd)
+	{
+		$message	=	'Brouwer is verwijderd!';
+	}
+	else
+	{
+		$message	=	'Het verwijderen is mislukt!';
+	}
+}
+
 //var_dump($fetchedResult);
 
 
@@ -97,7 +119,7 @@ try
 		?>
 	</p>
 
-	<form>
+	<form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
 
 	<table class="myTable">
 		
@@ -127,10 +149,10 @@ try
 					<?php foreach ($brouwer as $value): ?>
 						<td><?= $value ?></td>
 					<?php endforeach ?>
-					<td><input type="image" src="icon-delete.png" value="<?= $brouwer['brouwernr']?>" name="delete"></td>
+					<td><button type="submit" value="<?= $brouwer['brouwernr']?>" name="delete"><img src="icon-delete.png"></button></td>
 				</tr>
 			<?php endforeach ?>
-				
+
 		</tbody>
 
 	</table>

@@ -21,7 +21,6 @@ if (isset($_POST['submit']))
 	if(isset($_POST['todo-verwijderen']))
 	{
 		unset($_SESSION['todo-lijst'] [$_POST['todo-verwijderen']]);
-		header('location: Todo.php');
 	}
 
 	//wijziging in todo
@@ -37,7 +36,6 @@ if (isset($_POST['submit']))
 	if(isset($_POST['done-verwijderen']))
 	{
 		unset($_SESSION['done-lijst'] [$_POST['done-verwijderen']]);
-		header('location: Todo.php');
 	}
 
 	//wijzig in done
@@ -58,7 +56,7 @@ if (isset($_POST['submit']))
 
 	<h1>Todo app</h1>
 
-	 	<?php if ((!empty($_SESSION['todo-lijst']))||(!empty($_SESSION['done-lijst']))) :?> 
+	 	<?php if ((!empty($_SESSION['todo-lijst']))||(!empty($_SESSION['done-lijst']))) : ?> 
 			<h2>Nog te doen</h2>
 			<ul>
 				<?php foreach ($_SESSION['todo-lijst'] as $key => $todoTaken) : ?>
@@ -86,7 +84,7 @@ if (isset($_POST['submit']))
 	 		<?php if (!empty($_SESSION['done-lijst'])) : ?> 		
 				<ul>
 					<?php foreach ($_SESSION['done-lijst'] as $key => $doneTaken) : ?>
-						<?php foreach ($doneTaken as $taak):?>
+						<?php foreach ($doneTaken as $taak) : ?>
 							<li>
 								<form method="POST" action="todo.php">
 									<button class="done" value="<?= $key ?>" name="done-wijzigen" titel="done-wijzigen"><?= $taak?></button>
@@ -100,7 +98,7 @@ if (isset($_POST['submit']))
 		<?php endif ?>
 
 
-	<?php if ((empty($_SESSION['todo-lijst']) && (empty($_SESSION['done-lijst'])))) :?>
+	<?php if ((empty($_SESSION['todo-lijst']) && (empty($_SESSION['done-lijst'])))) : ?>
 		<p><?= $message; ?></p>
 	<?php endif ?>
 		
