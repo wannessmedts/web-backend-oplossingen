@@ -37,21 +37,21 @@ $items 	=	$itemsQuery->rowCount() ? $itemsQuery : [];
 			<?php if(!empty($items)): ?>
 				<ul class="items">
 					<?php foreach($items as $item): ?>
-					<?php if ($item['done']==0): ?>
-						<li>
-							<span class="item<?= $item['done'] ? ' done': '' ?>"><?= $item['naam'] ?></span>
-							<?php  if(!$item['done']): ?>
-								<a href="mark.php?as=done&item=<?= $item['id']; ?>" class="done-button">Done</a>
-							<?php endif; ?>
-						</li>
-					<?php else: ?>
-						<li>
-							<span class="item<?= $item['done'] ? ' done': '' ?>"><?= $item['naam'] ?></span>
-							<?php  if($item['done']): ?>
-								<a href="mark.php?as=notdone&item=<?= $item['id']; ?>" class="done-button">Do</a>
-							<?php endif; ?>
-						</li>
-					<?php endif ?>
+						<?php if ($item['done']==0): ?>
+							<li>
+								<span class="item<?= $item['done'] ? ' done': '' ?>"><?= $item['naam'] ?></span>
+								<?php  if(!$item['done']): ?>
+									<a href="mark.php?as=done&item=<?= $item['id']; ?>" class="done-button">Done</a>
+								<?php endif; ?>
+							</li>
+						<?php else: ?>
+							<li>
+								<span class="item<?= $item['done'] ? ' done': '' ?>"><?= $item['naam'] ?></span>
+								<?php  if($item['done']): ?>
+									<a href="mark.php?as=notdone&item=<?= $item['id']; ?>" class="done-button">Do</a>
+								<?php endif; ?>
+							</li>
+						<?php endif ?>
 					<?php endforeach; ?>
 				</ul>
 
